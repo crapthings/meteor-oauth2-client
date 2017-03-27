@@ -1,3 +1,5 @@
+import { isPlainObject } from 'lodash/fp'
+
 MeteorOAuth2 = {
   serviceName: 'MeteorOAuth2Server'
 }
@@ -19,4 +21,8 @@ if (Meteor.isClient) {
     forLoggedInUser: ['services.' + MeteorOAuth2.serviceName],
     forOtherUsers: []
   })
+}
+
+MeteorOAuth2.addService = function(service) {
+  ServiceConfiguration.configurations.upsert({ service: services.clientName }, { $set: service })
 }
