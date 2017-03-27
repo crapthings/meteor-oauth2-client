@@ -1,7 +1,7 @@
 Package.describe({
   name: 'crapthings:meteor-oauth2-client',
   summary: 'oauth2 client based on https://github.com/prime-8-consulting/meteor-oauth2',
-  version: '0.0.1',
+  version: '0.0.2',
   git: 'https://github.com/crapthings/meteor-oauth2-client',
   documentation: 'README.md'
 })
